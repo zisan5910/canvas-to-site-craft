@@ -219,21 +219,21 @@ const Certificates = () => {
   };
 
   return (
-    <section id="certificates" className="py-16 sm:py-20 bg-background">
+    <section id="certificates" className="py-12 sm:py-16 lg:py-20 bg-background">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12 sm:mb-16">
+        <div className="text-center mb-8 sm:mb-12 lg:mb-16">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <Award className="h-6 w-6 sm:h-8 sm:w-8 text-green-500" />
-            <h2 className="text-3xl sm:text-4xl font-bold text-foreground">Certifications</h2>
+            <Award className="h-6 w-6 sm:h-7 sm:w-7 lg:h-8 lg:w-8 text-green-500" />
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground">Certifications</h2>
           </div>
-          <p className="text-lg sm:text-xl text-muted-foreground">Professional achievements and recognitions</p>
+          <p className="text-base sm:text-lg lg:text-xl text-muted-foreground">Professional achievements and recognitions</p>
         </div>
 
         <div className="max-w-4xl mx-auto">
           <Card className="shadow-xl border-2 border-primary/20">
-            <CardContent className="p-4 sm:p-8">
-              <div className="text-center mb-6 sm:mb-8">
-                <div className="w-full h-48 sm:h-64 rounded-lg flex items-center justify-center mb-4 sm:mb-6 relative overflow-hidden">
+            <CardContent className="p-4 sm:p-6 lg:p-8">
+              <div className="text-center mb-4 sm:mb-6 lg:mb-8">
+                <div className="w-full h-40 sm:h-48 lg:h-64 rounded-lg flex items-center justify-center mb-4 sm:mb-6 relative overflow-hidden">
                   <img
                     src={certificates[currentCertificate].image}
                     alt={certificates[currentCertificate].title}
@@ -242,8 +242,8 @@ const Certificates = () => {
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-green-500/10"></div>
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="text-center z-10 p-3 sm:p-4 bg-background/80 rounded-lg max-w-xs sm:max-w-sm">
-                      <Award className="h-6 w-6 sm:h-8 sm:w-8 text-primary mx-auto mb-2" />
-                      <h3 className="text-lg sm:text-xl font-bold text-foreground mb-1">
+                      <Award className="h-5 w-5 sm:h-6 sm:w-6 lg:h-8 lg:w-8 text-primary mx-auto mb-2" />
+                      <h3 className="text-base sm:text-lg lg:text-xl font-bold text-foreground mb-1">
                         {certificates[currentCertificate].title}
                       </h3>
                       <p className="text-sm sm:text-md text-muted-foreground">
@@ -260,7 +260,7 @@ const Certificates = () => {
                   {certificates[currentCertificate].description}
                 </p>
 
-                <div className="flex justify-center items-center gap-4 mb-4 sm:mb-6">
+                <div className="flex justify-center items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
                   <Button
                     variant="outline"
                     size="icon"

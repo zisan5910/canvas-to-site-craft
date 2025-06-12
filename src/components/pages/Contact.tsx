@@ -27,32 +27,32 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-16 sm:py-20 bg-secondary/10">
+    <section id="contact" className="py-12 sm:py-16 lg:py-20 bg-secondary/10">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12 sm:mb-16">
+        <div className="text-center mb-8 sm:mb-12 lg:mb-16">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <Mail className="h-6 w-6 sm:h-8 sm:w-8 text-green-500" />
-            <h2 className="text-3xl sm:text-4xl font-bold text-foreground">Contact</h2>
+            <Mail className="h-6 w-6 sm:h-7 sm:w-7 lg:h-8 lg:w-8 text-green-500" />
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground">Contact</h2>
           </div>
-          <p className="text-lg sm:text-xl text-muted-foreground">Get in touch with me</p>
+          <p className="text-base sm:text-lg lg:text-xl text-muted-foreground">Get in touch with me</p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12">
-          <div className="space-y-4 sm:space-y-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12">
+          <div className="space-y-3 sm:space-y-4 lg:space-y-6">
             <div className="space-y-3 sm:space-y-4">
-              <div className="flex items-center gap-3 text-base sm:text-lg">
+              <div className="flex items-center gap-3 text-sm sm:text-base lg:text-lg">
                 <Phone className="h-4 w-4 sm:h-5 sm:w-5 text-green-500 flex-shrink-0" />
                 <span className="text-foreground">+8801712525910</span>
               </div>
-              <div className="flex items-center gap-3 text-base sm:text-lg">
+              <div className="flex items-center gap-3 text-sm sm:text-base lg:text-lg">
                 <MapPin className="h-4 w-4 sm:h-5 sm:w-5 text-red-500 flex-shrink-0" />
                 <span className="text-foreground">Bogura, Bangladesh</span>
               </div>
-              <div className="flex items-center gap-3 text-base sm:text-lg">
+              <div className="flex items-center gap-3 text-sm sm:text-base lg:text-lg">
                 <Linkedin className="h-4 w-4 sm:h-5 sm:w-5 text-blue-500 flex-shrink-0" />
                 <span className="text-foreground">LinkedIn Profile</span>
               </div>
-              <div className="flex items-center gap-3 text-base sm:text-lg">
+              <div className="flex items-center gap-3 text-sm sm:text-base lg:text-lg">
                 <Mail className="h-4 w-4 sm:h-5 sm:w-5 text-green-500 flex-shrink-0" />
                 <span className="text-foreground break-all">ridoan.zisan@gmail.com</span>
               </div>
@@ -60,10 +60,10 @@ const Contact = () => {
           </div>
 
           <Card className="shadow-lg">
-            <CardContent className="p-4 sm:p-6">
-              <form onSubmit={handleSubmit} className="space-y-4">
+            <CardContent className="p-4 sm:p-5 lg:p-6">
+              <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
+                  <label htmlFor="name" className="block text-sm font-medium text-foreground mb-1 sm:mb-2">
                     Your Name
                   </label>
                   <Input
@@ -78,7 +78,7 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-foreground mb-2">
+                  <label htmlFor="subject" className="block text-sm font-medium text-foreground mb-1 sm:mb-2">
                     Subject
                   </label>
                   <Input
@@ -93,7 +93,7 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
+                  <label htmlFor="message" className="block text-sm font-medium text-foreground mb-1 sm:mb-2">
                     Compose email
                   </label>
                   <Textarea
@@ -102,7 +102,7 @@ const Contact = () => {
                     value={formData.message}
                     onChange={handleInputChange}
                     placeholder="Message..."
-                    rows={6}
+                    rows={5}
                     required
                     className="text-sm sm:text-base resize-none"
                   />

@@ -57,10 +57,10 @@ const Navigation = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-6 xl:px-8 py-2 sm:py-3">
         <div className="flex justify-between items-center">
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex space-x-4 xl:space-x-6 mx-auto">
+          <div className="hidden lg:flex space-x-2 xl:space-x-4 mx-auto">
             {navigationItems.map((item) => (
               <button
                 key={item.id}
@@ -84,16 +84,16 @@ const Navigation = () => {
                   <Menu className="h-5 w-5" />
                 </Button>
               </SheetTrigger>
-              <SheetContent side="right" className="w-72 sm:w-80">
-                <div className="flex flex-col space-y-4 mt-8">
-                  <div className="text-lg font-semibold text-foreground mb-4">
+              <SheetContent side="right" className="w-64 sm:w-72">
+                <div className="flex flex-col space-y-3 mt-6">
+                  <div className="text-base sm:text-lg font-semibold text-foreground mb-3">
                     Navigation
                   </div>
                   {navigationItems.map((item) => (
                     <button
                       key={item.id}
                       onClick={() => scrollToSection(item.id)}
-                      className={`text-left py-3 px-4 rounded-lg transition-colors hover:bg-accent ${
+                      className={`text-left py-2 sm:py-3 px-3 sm:px-4 rounded-lg transition-colors hover:bg-accent text-sm sm:text-base ${
                         activeSection === item.id
                           ? 'bg-accent text-accent-foreground font-medium'
                           : 'text-muted-foreground'

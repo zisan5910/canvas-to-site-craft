@@ -9,7 +9,7 @@ const Experience = () => {
       title: "Bogura Online Blood Donation Organisation",
       role: "Volunteer & Developer",
       period: "2023-Present",
-      icon: <Heart className="h-6 w-6 sm:h-8 sm:w-8 text-red-500" />,
+      icon: <Heart className="h-5 w-5 sm:h-6 sm:w-6 lg:h-8 lg:w-8 text-red-500" />,
       achievements: [
         "Built blood donor platform serving 68k+ community members",
         "Implemented digital system reducing response time by 40%"
@@ -20,7 +20,7 @@ const Experience = () => {
       title: "Youth Hope BD",
       role: "Volunteer & Developer",
       period: "2025-Present",
-      icon: <Users className="h-6 w-6 sm:h-8 sm:w-8 text-green-500" />,
+      icon: <Users className="h-5 w-5 sm:h-6 sm:w-6 lg:h-8 lg:w-8 text-green-500" />,
       achievements: [
         "Developed platform for youth development and social services",
         "Created tools for volunteer management and event organization"
@@ -37,25 +37,25 @@ const Experience = () => {
   ];
 
   return (
-    <section id="experience" className="py-16 sm:py-20 bg-background">
+    <section id="experience" className="py-12 sm:py-16 lg:py-20 bg-background">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12 sm:mb-16">
+        <div className="text-center mb-8 sm:mb-12 lg:mb-16">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <Briefcase className="h-6 w-6 sm:h-8 sm:w-8 text-blue-500" />
-            <h2 className="text-3xl sm:text-4xl font-bold text-foreground">Experience</h2>
+            <Briefcase className="h-6 w-6 sm:h-7 sm:w-7 lg:h-8 lg:w-8 text-blue-500" />
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground">Experience</h2>
           </div>
-          <p className="text-lg sm:text-xl text-muted-foreground">Volunteer work and development projects</p>
+          <p className="text-base sm:text-lg lg:text-xl text-muted-foreground">Volunteer work and development projects</p>
         </div>
 
-        <div className="space-y-6 sm:space-y-8 mb-12 sm:mb-16">
+        <div className="space-y-4 sm:space-y-6 lg:space-y-8 mb-8 sm:mb-12 lg:mb-16">
           {experiences.map((exp, index) => (
             <Card key={index} className="border-l-4 border-l-blue-500 shadow-lg hover:shadow-xl transition-shadow">
-              <CardContent className="p-4 sm:p-6">
-                <div className="flex flex-col sm:flex-row sm:items-start gap-4">
+              <CardContent className="p-4 sm:p-5 lg:p-6">
+                <div className="flex flex-col sm:flex-row sm:items-start gap-3 sm:gap-4">
                   <div className="flex-shrink-0">{exp.icon}</div>
                   <div className="flex-1">
                     <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-3">
-                      <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-2 lg:mb-0">{exp.title}</h3>
+                      <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-foreground mb-2 lg:mb-0">{exp.title}</h3>
                       <div className="flex flex-wrap gap-2">
                         {exp.links.map((link, linkIndex) => (
                           <div key={linkIndex} className="flex items-center gap-1 text-blue-600 hover:text-blue-800 cursor-pointer">
@@ -65,7 +65,7 @@ const Experience = () => {
                         ))}
                       </div>
                     </div>
-                    <p className="text-base sm:text-lg font-medium text-muted-foreground mb-4">
+                    <p className="text-sm sm:text-base lg:text-lg font-medium text-muted-foreground mb-4">
                       {exp.role} | {exp.period}
                     </p>
                     <div className="space-y-2">
@@ -84,10 +84,10 @@ const Experience = () => {
         </div>
 
         <Card className="border-l-4 border-l-blue-500 shadow-lg">
-          <CardContent className="p-4 sm:p-6">
-            <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-6">Web Development Projects</h3>
+          <CardContent className="p-4 sm:p-5 lg:p-6">
+            <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-foreground mb-6">Web Development Projects</h3>
             <p className="text-muted-foreground mb-4 text-sm sm:text-base">Independent Developer | 2023-Present</p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
               {projects.map((project, index) => (
                 <div key={index} className="flex items-start gap-3 p-3 rounded-lg bg-secondary/20">
                   <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>

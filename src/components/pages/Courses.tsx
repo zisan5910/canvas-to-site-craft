@@ -10,7 +10,7 @@ const Courses = () => {
       description: "Gained foundational knowledge of AI concepts and applications",
       provider: "GOOGLE, IBM, Sololearn, Simplilearn|Skillup",
       duration: "6 Months",
-      icon: <Bot className="h-6 w-6 sm:h-8 sm:w-8 text-blue-500" />,
+      icon: <Bot className="h-5 w-5 sm:h-6 sm:w-6 lg:h-8 lg:w-8 text-blue-500" />,
       links: ["Certificate", "Course 1", "Course 2"]
     },
     {
@@ -18,7 +18,7 @@ const Courses = () => {
       description: "Acquired hands-on skills in building modern web applications",
       provider: "Programming Hero",
       duration: "1 week",
-      icon: <Globe className="h-6 w-6 sm:h-8 sm:w-8 text-green-500" />,
+      icon: <Globe className="h-5 w-5 sm:h-6 sm:w-6 lg:h-8 lg:w-8 text-green-500" />,
       links: ["Certificate", "Course"]
     },
     {
@@ -26,7 +26,7 @@ const Courses = () => {
       description: "Learned strategic online promotion techniques",
       provider: "HubSpot Academy",
       duration: "1 week",
-      icon: <TrendingUp className="h-6 w-6 sm:h-8 sm:w-8 text-orange-500" />,
+      icon: <TrendingUp className="h-5 w-5 sm:h-6 sm:w-6 lg:h-8 lg:w-8 text-orange-500" />,
       links: ["Certificate", "Course"]
     },
     {
@@ -34,30 +34,30 @@ const Courses = () => {
       description: "Mastered professional etiquette, management basics, and communication techniques",
       provider: "10 Minute School",
       duration: "3 weeks",
-      icon: <Users className="h-6 w-6 sm:h-8 sm:w-8 text-purple-500" />,
+      icon: <Users className="h-5 w-5 sm:h-6 sm:w-6 lg:h-8 lg:w-8 text-purple-500" />,
       links: ["Certificate", "Course"]
     }
   ];
 
   return (
-    <section id="courses" className="py-16 sm:py-20 bg-background">
+    <section id="courses" className="py-12 sm:py-16 lg:py-20 bg-background">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12 sm:mb-16">
+        <div className="text-center mb-8 sm:mb-12 lg:mb-16">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <BookOpen className="h-6 w-6 sm:h-8 sm:w-8 text-green-500" />
-            <h2 className="text-3xl sm:text-4xl font-bold text-foreground">Professional Courses</h2>
+            <BookOpen className="h-6 w-6 sm:h-7 sm:w-7 lg:h-8 lg:w-8 text-green-500" />
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground">Professional Courses</h2>
           </div>
-          <p className="text-lg sm:text-xl text-muted-foreground">Continuous learning and skill development</p>
+          <p className="text-base sm:text-lg lg:text-xl text-muted-foreground">Continuous learning and skill development</p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
           {courses.map((course, index) => (
             <Card key={index} className="border-l-4 border-l-green-500 shadow-lg hover:shadow-xl transition-all hover:scale-105">
-              <CardContent className="p-4 sm:p-6">
-                <div className="flex flex-col sm:flex-row sm:items-start gap-4">
+              <CardContent className="p-4 sm:p-5 lg:p-6">
+                <div className="flex flex-col sm:flex-row sm:items-start gap-3 sm:gap-4">
                   <div className="flex-shrink-0">{course.icon}</div>
                   <div className="flex-1">
-                    <h3 className="text-lg sm:text-xl font-bold text-foreground mb-2">
+                    <h3 className="text-base sm:text-lg lg:text-xl font-bold text-foreground mb-2">
                       {course.title}
                     </h3>
                     <p className="text-muted-foreground mb-3 text-sm sm:text-base">

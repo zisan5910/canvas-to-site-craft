@@ -56,19 +56,24 @@ const Navigation = () => {
   }, []);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-lg border-b border-border/50 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4">
         <div className="flex justify-between items-center">
+          {/* Logo/Brand */}
+          <div className="font-bold text-lg sm:text-xl gradient-text">
+            Ridoan
+          </div>
+
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex space-x-4 xl:space-x-6 mx-auto">
+          <div className="hidden lg:flex space-x-2 xl:space-x-4">
             {navigationItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`text-xs xl:text-sm font-medium transition-colors hover:text-primary px-2 py-1 rounded-md ${
+                className={`text-sm xl:text-base font-medium transition-all duration-300 px-3 py-2 rounded-lg ${
                   activeSection === item.id
-                    ? 'text-primary bg-primary/10'
-                    : 'text-muted-foreground hover:bg-accent'
+                    ? 'text-primary bg-primary/10 shadow-sm'
+                    : 'text-muted-foreground hover:text-primary hover:bg-accent/50'
                 }`}
               >
                 {item.label}
@@ -77,26 +82,26 @@ const Navigation = () => {
           </div>
 
           {/* Mobile Navigation */}
-          <div className="lg:hidden ml-auto">
+          <div className="lg:hidden">
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="sm" className="p-2">
-                  <Menu className="h-5 w-5" />
+                  <Menu className="h-6 w-6" />
                 </Button>
               </SheetTrigger>
-              <SheetContent side="right" className="w-72 sm:w-80">
+              <SheetContent side="right" className="w-80 sm:w-96">
                 <div className="flex flex-col space-y-4 mt-8">
-                  <div className="text-lg font-semibold text-foreground mb-4">
+                  <div className="text-xl font-bold gradient-text mb-6">
                     Navigation
                   </div>
                   {navigationItems.map((item) => (
                     <button
                       key={item.id}
                       onClick={() => scrollToSection(item.id)}
-                      className={`text-left py-3 px-4 rounded-lg transition-colors hover:bg-accent ${
+                      className={`text-left py-4 px-6 rounded-xl transition-all duration-300 text-lg ${
                         activeSection === item.id
-                          ? 'bg-accent text-accent-foreground font-medium'
-                          : 'text-muted-foreground'
+                          ? 'bg-primary text-primary-foreground shadow-lg font-semibold'
+                          : 'text-muted-foreground hover:bg-accent hover:text-accent-foreground'
                       }`}
                     >
                       {item.label}

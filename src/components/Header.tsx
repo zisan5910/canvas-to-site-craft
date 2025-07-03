@@ -38,7 +38,7 @@ const Header = ({ onClear }: HeaderProps) => {
                   <Button
                     variant="ghost"
                     size="icon"
-                    className="text-slate-600 hover:bg-slate-100 rounded-lg"
+                    className="text-blue-600 hover:text-blue-700 hover:bg-blue-50 rounded-lg border border-blue-200 bg-gradient-to-br from-blue-50 to-indigo-50 shadow-sm"
                     onClick={() => window.open('https://ridoan-zisan.netlify.app', '_blank')}
                   >
                     <Code className="h-5 w-5" />

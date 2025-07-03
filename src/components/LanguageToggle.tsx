@@ -19,9 +19,7 @@ const LanguageToggle = ({ language, onLanguageChange }: LanguageToggleProps) => 
         }`}
         onClick={() => onLanguageChange('html')}
       >
-        <span className="flex items-center gap-2">
-          🌐 HTML
-        </span>
+        HTML
       </Button>
       <Button
         variant={language === 'c' ? 'default' : 'ghost'}
@@ -32,9 +30,7 @@ const LanguageToggle = ({ language, onLanguageChange }: LanguageToggleProps) => 
         }`}
         onClick={() => onLanguageChange('c')}
       >
-        <span className="flex items-center gap-2">
-          💻 C Programming
-        </span>
+        C Programming
       </Button>
     </div>
   );
